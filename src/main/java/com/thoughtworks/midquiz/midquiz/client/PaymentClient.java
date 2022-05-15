@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name = "flightSite-client", url = "${application.flight-site.url}", configuration = PaymentConfig.class)
+@FeignClient(name = "payment-client", url = "${application.payment.url}", configuration = PaymentConfig.class)
 public interface PaymentClient {
     @PostMapping("/payment")
     PaymentResponse payment(@RequestBody PaymentRequest paymentRequest);

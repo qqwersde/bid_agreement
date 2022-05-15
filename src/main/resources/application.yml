@@ -15,5 +15,5 @@ spring:
 application:
   flight:
     url: http://localhost:8081
-  flight-site:
+  payment:
     url: http://localhost:8082
