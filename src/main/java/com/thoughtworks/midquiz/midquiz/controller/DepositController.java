@@ -1,9 +1,9 @@
 package com.thoughtworks.midquiz.midquiz.controller;
 
 
-import com.thoughtworks.midquiz.midquiz.Serveice.DepositService;
-import com.thoughtworks.midquiz.midquiz.request.DepositPaymentRequest;
-import com.thoughtworks.midquiz.midquiz.response.DepositPaymentResponse;
+import com.thoughtworks.midquiz.midquiz.serveice.DepositService;
+import com.thoughtworks.midquiz.midquiz.serveice.dto.request.DepositPaymentRequest;
+import com.thoughtworks.midquiz.midquiz.serveice.dto.response.DepositPaymentResponse;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -1,5 +1,6 @@
 package com.thoughtworks.midquiz.midquiz.exception;
 
+import com.netflix.hystrix.exception.HystrixRuntimeException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;

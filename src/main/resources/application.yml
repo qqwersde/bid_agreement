@@ -13,7 +13,18 @@ spring:
     port: 6379
     timeout: 10000
 application:
-  flight:
+  auction:
     url: http://localhost:8081
   payment:
     url: http://localhost:8082
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        #超时时间默认为1s
+        #建立连接所用的时间，适用于网络状况正常的情况下，两端连接所需要的时间
+        ConnectTimeOut: 10000
+        #指建立连接后从服务端读取到可用资源所用的时间
+        ReadTimeOut: 4000

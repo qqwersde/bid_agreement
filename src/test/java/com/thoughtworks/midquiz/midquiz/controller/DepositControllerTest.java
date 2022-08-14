@@ -2,15 +2,11 @@ package com.thoughtworks.midquiz.midquiz.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.thoughtworks.midquiz.midquiz.Serveice.DepositService;
-import com.thoughtworks.midquiz.midquiz.domain.feign.AuctionObjectInfo;
-import com.thoughtworks.midquiz.midquiz.domain.feign.PaymentResponse;
-import com.thoughtworks.midquiz.midquiz.entity.BidAgreement;
-import com.thoughtworks.midquiz.midquiz.entity.BidAgreementStatus;
+import com.thoughtworks.midquiz.midquiz.serveice.DepositService;
 import com.thoughtworks.midquiz.midquiz.exception.ErrorResult;
-import com.thoughtworks.midquiz.midquiz.request.DepositInfoDTO;
-import com.thoughtworks.midquiz.midquiz.request.DepositPaymentRequest;
-import com.thoughtworks.midquiz.midquiz.response.DepositPaymentResponse;
+import com.thoughtworks.midquiz.midquiz.serveice.dto.request.DepositInfoDTO;
+import com.thoughtworks.midquiz.midquiz.serveice.dto.request.DepositPaymentRequest;
+import com.thoughtworks.midquiz.midquiz.serveice.dto.response.DepositPaymentResponse;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -21,9 +17,6 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
-import java.time.LocalDateTime;
-
-import static com.thoughtworks.midquiz.midquiz.domain.feign.AuctionStatus.AVAILABLE;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
