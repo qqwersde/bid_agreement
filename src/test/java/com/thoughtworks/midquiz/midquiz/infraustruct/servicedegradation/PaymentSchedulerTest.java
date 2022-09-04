@@ -25,7 +25,6 @@ class PaymentSchedulerTest {
 
     @Test
     void should_throw_exception_when_condition_is_internal_error(){
-        BusinessException businessException = new BusinessException("支付异常", HttpStatus.INTERNAL_SERVER_ERROR);
         String transactionNo = "P001";
         PaymentResponse paymentResponse = PaymentResponse.builder().paymentId("001").payNo(transactionNo).code(0).msg("支付成功").build();
 

@@ -54,6 +54,7 @@ public class DepositService {
         PaymentRequest paymentRequest = PaymentRequest.init(transactionNo, depositPaymentRequest.getDepositInfoDTO());
         PaymentResponse paymentResponse;
         paymentResponse = paymentClient.payment(paymentRequest);
+        //id为null并且code=-3说明是hytrix的fallback返回的默认结果，分区才会执行
         if (paymentResponse.getPaymentId() == null && paymentResponse.getCode() == -3) {
             paymentResponse = paymentClientDegradation.getPaymentResponse(transactionNo);
         }
