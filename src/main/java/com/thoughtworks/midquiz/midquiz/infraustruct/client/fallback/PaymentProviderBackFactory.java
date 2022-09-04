@@ -8,7 +8,7 @@ import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UserProviderBackFactory implements FallbackFactory<PaymentClient> {
+public class PaymentProviderBackFactory implements FallbackFactory<PaymentClient> {
 
     @Override
     public PaymentClient create(Throwable throwable) {
